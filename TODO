@@ -1,0 +1,28 @@
+///////////////////////////
+ HI THIS IS MY TODO file
+///////////////////////////
+
+
+WE USE wmctrl -l command to get all 
+windows ID's (int the loop) in real time
+
+them we can set the position with xdotool:write
+
+
+ii[gfaerny@parrot]─[~]
+└──╼ $wmctrl -l
+0x00e00003 -1 parrot Top Panel
+0x00e00017 -1 parrot Bottom Panel
+0x02a0003e  0 parrot Ubuntu Manpage: xdotool - command-line X11 automation tool — Mozilla Firefox
+0x02c0000e  0 parrot wmctrl -l
+0x0160391c  2 parrot gfaerny
+0x02e00004  1 parrot ChatHub - Google Chrome
+┌─[gfaerny@parrot]─[~]
+└──╼ $xdotool getwindowname
+There are no windows in the stack
+Invalid window '%1'
+Usage: getwindowname [window=%1]
+If no window is given, %1 is used. See WINDOW STACK in xdotool(1)
+┌─[✗]─[gfaerny@parrot]─[~]
+└──╼ $xdotool getwindowname 0x02a0003e
+Ubuntu Manpage: xdotool - command-line X11 automation tool — Mozilla Firefox
